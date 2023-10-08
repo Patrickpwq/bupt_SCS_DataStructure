@@ -1,0 +1,12 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": false,
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "typeinfo": "c",
+        "string.h": "c",
+        "ctype.h": "c",
+        "stdlib.h": "c"
+    }
+}

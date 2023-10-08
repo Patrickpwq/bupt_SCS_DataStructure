@@ -1,0 +1,48 @@
+{
+  "options": {
+    "env": {
+      "Path": "C:\\MinGW\\bin;${env:Path}"
+    }
+  },
+  "tasks": [
+    {
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "-std=c11"
+      ],
+      "command": "C:\\MinGW\\bin\\gcc.exe",
+      "group": "build",
+      "label": "single file build",
+      "presentation": {
+        "clear": true,
+        "echo": false,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "silent",
+        "showReuseMessage": false
+      },
+      "problemMatcher": "$gcc",
+      "type": "process"
+    },
+    {
+      "args": ["-fexec-charset=GBK"],
+      "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "dependsOn": "single file build",
+      "label": "run and pause",
+      "presentation": {
+        "clear": true,
+        "echo": false,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "always",
+        "showReuseMessage": true
+      },
+      "problemMatcher": [],
+      "type": "pause-console"
+    }
+  ],
+  "version": "2.0.0"
+}
